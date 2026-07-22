@@ -21,9 +21,22 @@ function getUsers(req,res) {
 }
 
 function createUser(req,res) {
+   
+    const {name} = req.body;
+
+    if (!name) {
+        return res.status(400).json({
+            message:"name is required."
+        });
+    }
+
     console.log(req.body);
 
-    res.json(req.body);
+   return res.status(201).json({
+        message:"user created successfully",
+        data:req.body
+    });
+    
 }
 
 function updateUser(req,res) {
