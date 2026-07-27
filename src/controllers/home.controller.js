@@ -1,5 +1,5 @@
-function getHome(req,res) {
-    res.send("welcome to forgeboss");
+function getHome(req, res, next) {
+    return next(new Error("Testing Global Error Handler"));
 }
 
 
@@ -54,6 +54,11 @@ function deleteUser(req,res) {
     });
 }
 
+function homeController(req,res,next) {
+    return next(new Error("testing "));
+}
+
+
 
 
 
@@ -65,6 +70,7 @@ module.exports={
     getUsers,
     createUser,
     updateUser,
-    deleteUser
+    deleteUser,
+    homeController
 
 };
