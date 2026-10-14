@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+/*
+  ForgeBase theme (Tailwind v4).
+  Dark navy developer-platform look: navy page, lighter panels,
+  cyan primary actions. System sans-serif stack (works offline).
+  Primary text slate-100 (#F1F5F9), secondary slate-400 (#94A3B8).
+*/
+@theme {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, "Inter", sans-serif;
+
+  --color-navy-950: #070f1f;
+  --color-navy-900: #0b1220;
+  --color-navy-800: #111c2e;
+  --color-navy-700: #1b2940;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-navy-900);
+  color: #e2e8f0;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Visible keyboard focus for accessibility */
+:focus-visible {
+  outline: 2px solid #22d3ee;
+  outline-offset: 2px;
+}

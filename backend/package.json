@@ -1,0 +1,38 @@
+{
+  "name": "forgebase",
+  "version": "1.0.0",
+  "description": "ForgeBase — Backend-as-a-Service platform",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "jest --runInBand --forceExit --detectOpenHandles",
+    "test:watch": "jest --watch --runInBand"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.700.0",
+    "@aws-sdk/s3-request-presigner": "^3.700.0",
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^7.5.0",
+    "multer": "^1.4.5-lts.2",
+    "pino": "^9.6.0",
+    "pino-pretty": "^13.0.0",
+    "rate-limiter-flexible": "^5.0.4",
+    "uuid": "^11.1.0",
+    "ws": "^8.18.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.14",
+    "supertest": "^7.1.0"
+  }
+}
